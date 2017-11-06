@@ -1,0 +1,102 @@
+[
+    {
+"id": 0,
+"title": "Властелин Колец: Две крепости",
+"rating": "8.5" ,
+"year": 2002,
+"budget": 10,
+"gross" : 100 ,
+"poster": "https://www.kinopoisk.ru/film/vlastelin-kolec-dve-kreposti-2002-312/", 
+"position": 1
+    },
+    {
+"id": 1,
+"title": "Американская история Х",
+"rating": "8.4" ,
+"year": 1998, 
+"budget": 11,
+"gross": 111 , 
+"poster": "https://www.kinopoisk.ru/film/amerikanskaya-istoriya-kh-1998-382/", 
+"position": 2
+    },
+    {
+"id": 2,
+"title": "ВАЛЛ-И",
+"rating": "8.4" ,
+"year": 2008, 
+"budget": 12,
+"gross":  112, 
+"poster": "https://www.kinopoisk.ru/film/valli-2008-279102/", 
+"position": 3
+    },
+    {
+      "id": 3,
+"title": "Большой куш",
+"rating": "8.4" ,
+"year": 2000, 
+"budget": 13,
+"gross":  113, 
+"poster": "https://www.kinopoisk.ru/film/bolshoy-kush-2000-526/", 
+"position": 4  
+    },
+    {
+"id": 4,
+"title": "Остров проклятых",
+"rating": "8.4" ,
+"year": 2009, 
+"budget": 14,
+"gross":  114, 
+"poster": "https://www.kinopoisk.ru/film/ostrov-proklyatykh-2009-397667/", 
+"position": 5
+    },
+    {
+"id": 5,
+"title": "Пираты Карибского моря: Проклятие чёрной жемчужины",
+"rating": "8.4" ,
+"year": 2003, 
+"budget": 15,
+"gross":  115, 
+"poster": "https://www.kinopoisk.ru/film/piraty-karibskogo-morya-proklyatie-chernoy-zhemchuzhiny-2003-4374/", 
+"position": 6
+    },
+    {
+"id": 6,
+"title": "Джентельмены удачи",
+"rating": "8.4" ,
+"year": 1971, 
+"budget": 16,
+"gross":  116, 
+"poster": "https://www.kinopoisk.ru/film/dzhentlmeny-udachi-1971-44386/", 
+"position": 7
+    },
+    {
+"id": 7,
+"title": "Тёмный рыцарь",
+"rating": "8.4" ,
+"year": 2008, 
+"budget": 17,
+"gross":  117, 
+"poster": "https://www.kinopoisk.ru/film/temnyy-rycar-2008-111543/", 
+"position": 8
+    },
+    {
+"id": 8,
+"title": "Пролетая над гнездом кукушки",
+"rating": "8.4" ,
+"year": 1975,
+"budget": 18,
+"gross":  118, 
+"poster": "https://www.kinopoisk.ru/film/proletaya-nad-gnezdom-kukushki-1975-336/", 
+"position": 9
+    },
+    {
+"id": 9,
+"title": "Пробуждение",
+"rating": "8.4" ,
+"year": 1990, 
+"budget": 19,
+"gross":  119, 
+"poster": "https://www.kinopoisk.ru/film/probuzhdenie-1990-2950/", 
+"position": 10
+    }
+]
