@@ -71,6 +71,14 @@ for (let i = 0 ; i < _actors.length; i ++)
     res.send("EMPTY");
 });
 
+app.post('/api/actors/create', (req, res) => {
+    
+        req.body.id = Date.now().toString();
+        _actors.push(req.body);
+        fs.writeFile("actors.json", JSON.stringify(_actors), "utf8", function () { });
+        res.send(req.body);   
+});
+
 app.post('/create', (req, res) => {
     if(validatorController.validateCreate(req.body))
      {
@@ -104,6 +112,27 @@ app.post('/create', (req, res) => {
      {
         res.send("add all data");
      }
+});
+
+
+app.post('/api/actors/update', (req, res) => {
+for (let i = 0 ; i < _actors.length; i ++)
+{
+    if (_actors[i].id === req.body.id)
+    {
+      if(req.body.name !== undefined)
+      _actors[i].name = req.body.name;
+      if(req.body.birth !== undefined)
+      _actors[i].birth = req.body.birth;
+      if(req.body.films !== undefined)
+      _actors[i].films = req.body.films;
+      if(req.body.liked !== undefined)
+      _actors[i].liked = req.body.liked;
+    }
+}
+
+ fs.writeFile("actors.json", JSON.stringify(_actors), "utf8", function () { });
+    res.send(req.body);
 });
 
 app.post('/update', (req, res) => {
