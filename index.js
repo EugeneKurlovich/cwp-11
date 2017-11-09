@@ -162,9 +162,15 @@ for (let i = 0 ; i < _films.length; i ++)
       }
 }
 
-
  fs.writeFile("top250.json", JSON.stringify(_films), "utf8", function () { });
     res.send(req.body);
+});
+
+app.post('/api/actors/delete', (req, res) => {
+   _actors.splice(_actors.findIndex(actor => actor.id === req.body.id), 1);
+  fs.writeFile("actors.json", JSON.stringify(_actors), "utf8", function () { });
+
+  res.send("DELETED");
 });
 
 app.post('/delete', (req, res) => {
