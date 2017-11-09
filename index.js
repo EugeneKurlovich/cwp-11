@@ -1,6 +1,7 @@
 const express = require('express');
 const app = express();
 let _films = require("./top250.json");
+let _actors = require("./actors.json");
 var bodyParser = require('body-parser');
 let validatorController =  require('./validator');
 const fs = require('fs');
@@ -9,6 +10,18 @@ app.use( bodyParser.json() );
 
 app.get('/', (req, res) => {
   res.send("Hello World!!!");
+});
+
+app.get('/api/actors/readAll', (req, res) => {
+  _actors.sort((a, b) => {
+
+                    if (a.liked > b.liked) return 1;
+                    if (a.liked === b.liked) return 0;
+                    if (a.liked < b.liked) return-1;          
+        });
+
+_actors.reverse();
+res.send(_actors);
 });
 
 app.get('/readAll', (req, res) => {
@@ -32,7 +45,30 @@ res.send(newFilms);
 
 app.post('/read',(req, res) => {
   let id = req.body.id;
- res.send(_films[id-1]);
+
+for (let i = 0 ; i < _films.length; i ++)
+{
+    if(id === _films[i].id)
+    {
+      res.send(_films[i]);
+      return;
+    }
+}
+    res.send("EMPTY");
+});
+
+app.post('/api/actors/read',(req, res) => {
+  let id = req.body.id;
+
+for (let i = 0 ; i < _actors.length; i ++)
+{
+    if(id === _actors[i].id)
+    {
+      res.send(_actors[i]);
+      return;
+    }
+}
+    res.send("EMPTY");
 });
 
 app.post('/create', (req, res) => {
