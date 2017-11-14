@@ -12,6 +12,8 @@ app.get('/', (req, res) => {
   res.send("Hello World!!!");
 });
 
+app.use(express.static('public'));
+
 app.get('/api/actors/readAll', (req, res) => {
   _actors.sort((a, b) => {
 
@@ -181,6 +183,13 @@ checkSpaces();
   res.send("DELETED");
 });
 
+
+app.post('/api/*',(req,res)=>
+{
+    Log(Date.now().toString());
+    Log(req.body.id);
+    res.send("log");
+});
 
 function checkSpaces()
 {
