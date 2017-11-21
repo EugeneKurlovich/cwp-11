@@ -1,0 +1,15 @@
+::ffff:127.0.0.1 - GET /api/actors/readAll HTTP/1.1 200 395 - 32.203 ms
+::ffff:127.0.0.1 - GET /api/route/films/readAll HTTP/1.1 404 162 - 13.560 ms
+::ffff:127.0.0.1 - GET /api/readAll HTTP/1.1 200 1978 - 1.989 ms
+::ffff:127.0.0.1 - GET /api/films/readAll HTTP/1.1 404 156 - 14.546 ms
+::ffff:127.0.0.1 - GET /api/films/readAll HTTP/1.1 200 1978 - 17.957 ms
+::ffff:127.0.0.1 - GET /api/films/readAll HTTP/1.1 200 1978 - 15.755 ms
+::ffff:127.0.0.1 - POST /api/films/read HTTP/1.1 200 202 - 1.195 ms
+::ffff:127.0.0.1 - POST /api/films/create HTTP/1.1 500 1120 - 41.457 ms
+::ffff:127.0.0.1 - POST /api/films/create HTTP/1.1 200 123 - 43.661 ms
+::ffff:127.0.0.1 - GET /api/films/readAll HTTP/1.1 200 2103 - 7.354 ms
+::ffff:127.0.0.1 - POST /api/films/delete HTTP/1.1 200 7 - 3.510 ms
+::ffff:127.0.0.1 - GET /api/films/readAll HTTP/1.1 200 1978 - 2.483 ms
+::ffff:127.0.0.1 - GET /api/actors/readAll HTTP/1.1 200 395 - 2.815 ms
+::ffff:127.0.0.1 - POST /api/actors/delete HTTP/1.1 200 7 - 1.430 ms
+::ffff:127.0.0.1 - GET /api/actors/readAll HTTP/1.1 200 298 - 1.002 ms
