@@ -2,6 +2,7 @@
   "name": "cwp-09",
   "author": "Eugene Kurlovich",
   "dependencies": {
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
   }
 }
