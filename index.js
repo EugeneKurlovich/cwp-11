@@ -3,17 +3,19 @@ const app = express();
 let _films = require("./top250.json");
 let _actors = require("./actors.json");
 var bodyParser = require('body-parser');
+const path = require('path');
 let validatorController =  require('./validator');
 const fs = require('fs');
-app.use( bodyParser.json() ); 
-
+app.use( bodyParser.json()); 
+const router = express.Router();
+const images_controller = require('./images');
 
 app.get('/', (req, res) => {
   res.send("Hello World!!!");
 });
 
-app.use(express.static('public'));
-
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/images/actors', images_controller);
 app.get('/api/actors/readAll', (req, res) => {
   _actors.sort((a, b) => {
 
@@ -75,10 +77,17 @@ for (let i = 0 ; i < _actors.length; i ++)
 
 app.post('/api/actors/create', (req, res) => {
     
+    if (validatorController.checkLikedAndFilms(req.body) !== false)
+    {
         req.body.id = Date.now().toString();
         _actors.push(req.body);
         fs.writeFile("actors.json", JSON.stringify(_actors), "utf8", function () { });
         res.send(req.body);   
+    }
+    else
+    {
+      res.send("films or liked < 0");
+    }
 });
 
 app.post('/create', (req, res) => {
@@ -184,12 +193,7 @@ checkSpaces();
 });
 
 
-app.post('/api/*',(req,res)=>
-{
-    Log(Date.now().toString());
-    Log(req.body.id);
-    res.send("log");
-});
+
 
 function checkSpaces()
 {
