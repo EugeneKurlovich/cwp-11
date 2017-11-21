@@ -18,8 +18,21 @@ function validateBudgetAndGross(body) {
         return false;
 }
 
+function checkLikedAndFilms(body)
+{
+    if (body.liked < 0 || body.films < 0)
+    {
+        return false;
+    }
+    else
+    {
+        return true;
+    }
+}
+
 
 module.exports = {
     validateCreate,
-    validateBudgetAndGross
+    validateBudgetAndGross,
+    checkLikedAndFilms
 };
